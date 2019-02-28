@@ -20,5 +20,9 @@ class Show < ActiveRecord::Base
      Show.sum("rating")
  end
 
+ def self.popular_shows
+   Show.where("release_date > 2002").order(release_date: :desc)
+ end
+
 
 end
