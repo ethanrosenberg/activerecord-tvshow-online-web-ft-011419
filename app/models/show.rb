@@ -21,7 +21,7 @@ class Show < ActiveRecord::Base
  end
 
  def self.popular_shows
-   Show.where("release_date > 2002").order(release_date: :desc)
+   Show.where("rating > 5")
  end
 
 
