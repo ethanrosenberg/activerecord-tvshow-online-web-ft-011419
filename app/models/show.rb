@@ -1,7 +1,7 @@
 class Show < ActiveRecord::Base
 
   def self.highest_rating
-      highest_rating = Show.order(rating: :desc).first
+      highest_rating = Show.order(rating: :desc).first.rating
   end
 
 
